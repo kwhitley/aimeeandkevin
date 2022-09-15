@@ -37,9 +37,26 @@ const { title } = Astro.props;
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
     height: 80%;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     padding: 3em;
+  }
+
+  body > * {
+    max-width: 800px;
+  }
+
+  h1 {
+    font-weight: 200;
+    font-size: 2vw;
+    font-size: clamp(1rem, 10vw, 2rem);
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    line-height: 1.5em;
+    margin-bottom: 2em;
   }
 </style>
